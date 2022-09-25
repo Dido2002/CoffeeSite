@@ -1,0 +1,900 @@
+:root{
+    color:#dbc1ac;
+    color:#634832;
+    color:#616063;
+    color:#ccb9b1;
+    color:#c08267;
+    color:#ffbf66;
+    color:#d46f4d;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body, html{
+    overflow-x: hidden;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+/*Header + NAV_____________________________________*/
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/HTML,CSS, JS/UniWork/CoffeeProjectCw/CoffeeSiteHere/CoffeeBg.jpg");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/*HOME PAGE STARTS HERE....*/
+.logo{
+    position: relative;
+    font-size:34px;
+    color:#ccb9b1;
+    text-transform:uppercase;
+}
+.logo::before{
+    content:attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    color:#ffbf66;
+    -webkit-text-stroke:0vw #c08267;
+    border-right:2px solid #ffbf66;
+    overflow: hidden;
+    animation:animate 6s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+.active{
+    color:#ffbf66;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    font-weight:600;
+    letter-spacing: 0.5px;
+    padding:0 10px;
+}
+.active:after{
+    content: "";
+    position: absolute;
+    background-color: #d46f4d;
+    height:3px;
+    width: 0;
+    left:0;
+    bottom:-10px;
+    transition:0.3s;
+}
+.active:hover{
+    color:#ffffff;
+}
+.active:hover:after{
+    width:100%;
+}
+ul{
+    list-style: none;
+}
+.header-content{
+    margin-bottom: 150px;
+    color:whitesmoke;
+    text-align: center;
+    position: relative;
+}
+.header-content h2{
+    font-size:6vmin;
+    margin-bottom: 20px;
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background-color: #ffbf66;
+    margin:10px auto;
+    border-radius: 5px;
+}
+.header-content h1{
+    font-size: 3.5vmin;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color:#ffbf66;
+}
+.ctn{
+    padding: 15px 25px;
+    background-color: #634832;
+    border-radius: 30px;
+    color:whitesmoke;
+    text-decoration: none;
+    font-size:20px;
+    
+}
+.ctn:hover{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+    border:2px solid #634832;
+    background-color: #ffbf66;
+    color:#25282D;
+    transition-delay: 0.1s;
+    transition-duration: 0.6s; 
+}
+.navbar{
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    top:0;
+    left:0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color:whitesmoke;
+}
+.menu-btn{
+    position: absolute;
+    top:30px;
+    right:30px;
+    width:40px;
+    border-radius: 10px;
+    cursor:pointer;
+    display: none;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links li{
+    margin: 0 30px;
+}
+/*Header + NAV______________________________________*/
+
+/*Events Section_______________________________*/
+section{
+    width: 80%;
+    margin:80px auto;
+}
+.title{
+    text-align: center;
+    font-size:4vmin;
+    color:#484872;
+    letter-spacing: 2px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.row p{
+    color:#25282D;
+}
+.row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col{
+    transition: transform .5s ease;
+}
+.col img{
+    box-shadow: 4px 4px 2px rgb(121, 118, 118);
+}
+.pic-1{
+    animation: mymove1 5s infinite;
+    width: 80%;
+}
+.pic-2{
+    animation: mymove 5s infinite;
+    width: 75%;
+    max-height: 260px;
+}
+
+@keyframes mymove {
+    50% {box-shadow:7px 7px rgb(200, 150, 75), 14px 14px #56332fdd, 21px 21px rgba(200, 150, 75, 0.855)}
+}
+@keyframes mymove1 {
+    50% {box-shadow:-7px -7px rgb(200, 150, 75), -14px -14px #56332fdd, -21px -21px rgba(200, 150, 75, 0.855)}
+}
+
+
+.col img:hover{
+    transform: scale(1.1);
+}
+.events .row{
+    margin-top:50px;
+}
+
+h4{
+    font-size: 3vmin;
+    color:#484872;
+    margin: 20px auto;
+}
+.hp-par{
+    padding: 0px 40px;
+}
+.events .ctn{
+    margin-top: 30px;
+}
+/*Events Section_______________________________*/
+
+
+/*About Section_________________________*/
+.about{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(black, black),url("/Pictures1/cf-machine1.jpg");
+    background-blend-mode:saturation;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}
+.about-content{
+    width: 60%;
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-content h1{
+    font-size: 7vmin;
+    color:#ffbf66;
+}
+.about-content .line{
+    margin-bottom: 50px;
+    width: 70%;
+}
+.about-content p{
+    color:#ffbf66;
+    font-size:19px;
+    font-weight: 600;
+}
+
+/*About Section_________________________*/
+
+.content-col{
+    width: 40%;
+}
+.image-col{
+    width: 50%;
+}
+svg{
+    font-weight:bold;max-width:500px;height:100%;
+}
+.tours .image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    align-items: center;
+}
+.image-gallery img{
+    max-width: 300px;
+    margin:10px;
+}
+.content-col h1{
+    font-size:7vmin;
+    color:#484872;
+}
+.content-col h1::first-line{
+    color:#634832
+}
+.content-col .line{
+    margin-left: -1px;
+    width: 80%;
+}
+.content-col p{
+    padding: 0;
+    margin:30px auto;
+}
+
+.second-row .second-col{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+.second-tours{
+    width: 100%;
+    margin:80px auto;
+    position: relative;
+    top:80px;
+}
+.second-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #25282D;
+}
+.machine-img{
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.image-gallery-second{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.heading-text{
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.secondary-text{
+    width: 40%;
+    display: flex;
+    text-align: center;
+}
+
+.text-col{
+    width: 40%;
+}
+.primary-text{
+    font-size:3.5vmin;
+    color:whitesmoke;
+}
+.secondary-text h3{
+    font-size:20px;
+    color:whitesmoke;
+}
+/*Footer starts here*/
+.footer{
+    width: 100%;
+    min-height: 200px;
+    padding: 20px 80px;
+    margin:0;
+    background-color: #484872;
+    text-align: center;
+}
+.footer p{
+    color:#ffbf66;
+    margin:20px auto;
+}
+/*Responsive*/
+@media (max-width:1400px){
+    .col img{
+        max-width:100%;
+    }
+}
+@media (max-width:900px){
+    .menu-btn{
+        display: block;
+    }
+    .navbar{
+        padding:0;
+    }
+    .logo{
+        position:absolute;
+        top:20px;
+        left:20px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width:100%;
+        height: 40vh;
+        justify-content: center;
+        background-color: #484872;
+        margin-top:-900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu{
+        margin-top:0px;
+        border-bottom-right-radius:30%;
+    }
+    .nav-links li{
+        margin:15px auto;
+    }
+    /*Events section*/
+    .row{
+        flex-direction: column;
+    }
+    .row .col{
+        margin:20px auto;
+    }
+    .col img{
+        max-width: 100%;
+    }
+
+    /*Explore section*/
+    .about-content{
+        width: 100%;
+    }
+    .tours .col{
+        width: 100%;
+    }
+    .image-gallery{
+        justify-content: center;
+        align-items: center;
+    }
+    .image-gallery img{
+        width: 90%;
+    }
+    .footer{
+        padding: 10px;
+    }
+}
+img{
+    transition: transform .3s ease;
+}
+.img:hover{
+    transform: scale(1.1);
+}
+.footer-inner li{
+    display: inline;
+    margin:15px;
+}
+
+.footer-inner i{
+    font-size:50px;
+    color:#ffbf66;
+}
+/*HOME PAGE STARTS HERE....*/
+
+/*NEWS PAGE STARTS HERE............*/
+.header-news{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/HTML,CSS, JS/UniWork/CoffeeProjectCw/CoffeeSiteHere/Coffenewsbg.jpg");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#blog{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:40px;
+    border-bottom:3px solid #c08267;
+}
+.news-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px 0px;
+    flex-wrap:wrap; 
+}
+.news-box{
+    width: 350px;
+    background-color: whitesmoke;
+    border:1px solid #ececec;
+    margin:20px;
+    transition: transform 0.6s ease;
+}
+
+.news-box:hover{
+    transform:scale(1.1)
+}
+.news-img{
+    width: 100%;
+    height: auto;
+}
+.news-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.news-text{
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+}
+.news-text span{
+    color:#484872;
+    font-size:12px;
+    font-weight: 600;
+}
+.news-text .news-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color:#ffbf66;
+}
+.title h1{
+    background-image: linear-gradient(45deg, #634832, #ffbf66);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    background-clip:none;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.news-text .news-title:hover{
+    color:#634832;
+    transition:  all ease 0.3s;
+}
+.news-text p{
+    color:#616063;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:20px 0px;
+}
+.news-text a{
+    color: #ffbf66;
+}
+.news-text a:hover{
+    color:#634832;
+    transition: all ease 0.3s;
+}
+
+@media(max-width:1250px){
+    .news-box{
+        width: 300px;
+    }
+}
+@media(max-width:1100px){
+    .news-box{
+        width: 70%;
+    }
+}
+@media(max-width:550px){
+    .news-box{
+        margin:20px 10px;
+        width: 100%;
+    }
+    #news{
+        padding: 20px;
+    }
+}
+/*NEWS PAGE ENDS HERE............*/
+/*-------------------------------------------------*/
+/*PRODUCTS PAGE STARTS HERE...........*/
+:root{
+    color:#ffbf66;
+    --alice-blue:#f8f9fa;
+    --carribean-green:#40c9a2;
+    --gray:#ededed;
+}
+.header-products{
+    width: 100vw;
+    height: 100vh;
+    background-image:linear-gradient(black, black), url("/HTML,CSS, JS/UniWork/CoffeeProjectCw/CoffeeSiteHere/CoffeeBg.jpg");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-blend-mode: saturation;
+}
+.container img{
+    width: 100%;
+    height:240px;
+    display: block;
+}
+.container{
+    width: 88vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+.lg-tittle,
+.md-tittle,
+.sm-tittle{
+    padding: 0.6rem 0;
+    text-transform: capitalize;
+}
+.lg-tittle{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.3rem 0;
+    opacity: 0.9;
+    color:#634832;
+}
+
+.md-tittle{
+    font-size: 2rem;
+}
+.sm-tittle{
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.text-light{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0.4rem 0;
+    color:#484872;
+}
+.products{
+    background-color: var(--alice-blue);
+    padding: 3.2rem 0;
+}
+.products .text-light{
+    text-align:center;
+    width:70%;
+    margin:0.9rem auto;
+}
+.product{
+    margin:2rem;
+    position:relative;
+}
+.product-items{
+    width: 90%;
+}
+.product-content{
+    background-color: var(--gray);
+    padding:3rem 0.5rem 2rem 0.5rem;
+    cursor:pointer;
+}
+.product-image{
+    background-color: var(--white-light);
+    box-shadow: 0 0 20px 10px var(--white-light);
+    width: 300px;
+    height: 300px;
+    margin:0 auto;
+    border-radius: 50%;
+    transition:background 0.5s ease;
+}
+.product-btn{
+    display: flex;
+    justify-content: center;
+    margin-top:1.4rem;
+    opacity: 0;
+    transform: opacity 0.6s ease;
+}
+.btn-cart, .btn-buy{
+    background-color: transparent;
+    border:1px solid black;
+    padding: 0.8rem 0;
+    width: 125px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border:none;
+    transition: all 0.6s ease;
+}
+.btn-cart{
+    background-color: black;
+    color: white;
+}
+.btn-cart:hover{
+    background-color: #ffbf66;
+}
+.btn-buy{
+    background: white;
+}
+.btn-buy:hover{
+    background-color: #ffbf66;
+    color:#fff;
+}
+.product-info{
+    background-color: white;
+    padding:2rem;
+}
+.product-info-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating span{
+    color:#ffbf66;
+}
+.product-name{
+    color:black;
+    display: block;
+    text-decoration:none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight:bold;
+    margin-left:10px;
+}
+.product-price{
+    padding-top:0.6rem;
+    padding-right: 0.6rem;
+    display: inline-block;
+}
+.product-price:first-of-type{
+    text-decoration: line-through;
+    color:#ffbf66;
+}
+.product-image img{
+    transition: transform 0.6s ease;
+}   
+.product:hover .product-image img{
+    transform: scale(1.1);
+}
+.product:hover .product-image{
+    background-color:#ffbf66;
+}
+.product:hover .product-btn{
+    opacity: 1;
+}
+.off-info .sm-tittle{
+    background-color:#ffbf66;
+    color:white;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    top:0;
+    left:0;
+    writing-mode: vertical-lr;
+    transform:rotate(180deg);
+    z-index:1;
+    letter-spacing: 3px;
+    cursor:pointer;
+}
+/*Resposive*/
+@media screen and(max-width:992px){
+    .product-items{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and(max-width:1200px){
+    .product-items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .product{
+        margin-right:1rem;
+        margin-left: 1rem;
+    }
+    .products .text-light{
+        width: 50%;
+    }
+}
+@media screen and(max-width:1336px){
+    .product-items{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/*PRODUCTS PAGE ENDS HERE...........*/
+
+/*CONTACT PAGE STARTS HERE................*/
+
+.contact{
+    height: 100vh;
+    display: flex;
+    width:100vw;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(black, black),url("/Pictures1/cf-machine1.jpg");
+    background-blend-mode:saturation;
+    background-size:cover;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 48px;
+    font-weight: 600;
+    color:#ffbf66;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+}
+.container .contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contact-info .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contact-info .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contact-info .box .text{
+    display: flex;
+    margin-left: 20px ;
+    font-size:16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contact-info .box .text h3{
+    font-weight: 500;
+    color:#00bcd4;
+}
+.contact-form{
+    width: 40%;
+    padding: 40px;
+    background-color: #fff;
+}
+.contact-form h2{
+    font-size:30px;
+    color:#333;
+    font-weight: 500;
+}
+.contact-form .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top:10px;
+}
+.contact-form .inputBox input, 
+.contact-form .inputBox textarea{
+    width: 100%;
+    padding:5px 0;
+    font-size:16px;
+    margin:10px 0;
+    border:none;
+    border-bottom: 2px solid #333;
+    outline:none;
+    resize: none;
+}   
+.contact-form .inputBox span{
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0;
+    pointer-events: none;
+    transition:0.5s;
+    color:#666;
+}
+.contact-form .inputBox input:focus ~ span,
+.contact-form .inputBox input:valid ~ span,
+.contact-form .inputBox textarea:focus ~ span,
+.contact-form .inputBox textarea:valid ~ span{
+     color:#e91e63;
+     font-size: 12px;
+     transform: translateY(-20px);
+}
+.contact-form .inputBox input[type="submit"]{
+    width: 100%;
+    background-color: #00bcd4;
+    color:#fff;
+    cursor: pointer;
+    border:none;
+    padding: 10px;
+    font-size:18px;
+}
+@media(max-width:800px){
+    
+    .contact{
+        padding: 30px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contact-info{
+        margin-bottom:40px;
+    }
+    .container .contact-info,
+    .contact-form{
+        width: 100%;
+    }
+}
+/*CONTACT PAGE ENDS HERE................*/
+
+
